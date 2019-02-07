@@ -56,10 +56,12 @@ public class StackImpl implements Stack {
             System.out.println("[]");
         }
         else {
-            for (String str : stack) {
-                if (str == null) break;
-                System.out.print(str + " ");
+            System.out.print("[ ");
+            for (int index = 0; index < top; index++) {
+//                if (str == null) break;
+                System.out.print("'" + stack[index] + "', ");
             }
+            System.out.print("'" + stack[top] + "' ]");
         }
 
     }
