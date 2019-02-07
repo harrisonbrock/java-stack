@@ -28,12 +28,12 @@ public class StackImpl implements Stack {
     }
 
     @Override
-    public int size() {
+    public String size() {
         if (top < 0) {
-            return 0;
+            return "You have not items in your Stack";
         }
         else {
-            return top;
+            return Integer.toString(top+1);
         }
     }
 
