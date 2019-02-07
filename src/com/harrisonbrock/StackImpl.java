@@ -28,6 +28,16 @@ public class StackImpl implements Stack {
     }
 
     @Override
+    public int size() {
+        if (top < 0) {
+            return 0;
+        }
+        else {
+            return top;
+        }
+    }
+
+    @Override
     public String pop() {
         if (top < 0) {
             return "Your Stack Is Empty";
