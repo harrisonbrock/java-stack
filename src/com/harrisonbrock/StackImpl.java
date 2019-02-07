@@ -43,18 +43,22 @@ public class StackImpl implements Stack {
             return "Your Stack Is Empty";
         }
         else {
-            return stack[top--];
+            String str = stack[top];
+            stack[top] = null;
+            top--;
+            return str;
         }
     }
 
     @Override
     public void print() {
         if (isEmpty()) {
-            System.out.println("Stack is empty");
+            System.out.println("[]");
         }
         else {
             for (String str : stack) {
-                System.out.println(str);
+                if (str == null) break;
+                System.out.print(str + " ");
             }
         }
 
